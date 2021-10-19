@@ -1,0 +1,28 @@
+def solution(array, commands):
+    print(commands[0][1])
+    
+    i = list()
+    j = list()
+    k = list()
+    answer = list()
+    
+    for c in range(len(commands)):
+        i.append(commands[c][0])
+        j.append(commands[c][1])
+        k.append(commands[c][2])
+
+          
+    for n in range(len(i)):
+        start = i[n] - 1
+        end = j[n]
+        mid = k[n] - 1
+        a = array[start:end]
+        a.sort()
+        answer.append(a[mid])
+    
+    
+    
+    return answer
+
+
+
