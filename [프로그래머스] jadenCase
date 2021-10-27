@@ -1,0 +1,15 @@
+def solution(s):
+    return ' '.join([word.capitalize() for word in s.split(" ")])
+    
+def solution(s):
+    
+    s = list(s.lower())
+    em = [x for x, char in enumerate(s) if char == ' ']
+    
+    em.append(-1)
+    for j in em:
+        if j+1 != len(s):
+            s[j+1] = s[j+1].upper()
+        
+    answer = "".join(s)
+    return answer
